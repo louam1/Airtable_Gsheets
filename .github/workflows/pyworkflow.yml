@@ -17,7 +17,7 @@ jobs:
       - name: Dotenv Action
   # You may pin to the exact commit or the version.
   # uses: falti/dotenv-action@d4d12eaa0e1dd06d5bdc3d7af3bf4c8c93cb5359
-        uses: falti/dotenv-action@v0.2.7
+        run: pip install python-dotenv 
 
 
 
