@@ -1,12 +1,13 @@
 
 import requests
 import pandas as pd
+import os
 
 
-api_key1 = api_key
+api_key = os.environ.get("api_key")
 table_name= 'Students'
 endpoint1=F'https://api.airtable.com/v0/base_id/{table_name}'
-base_id1 = base_id
+base_id = os.environ.get("base_id")
 
 def airtable_download(table, params_dict={}, api_key=None, base_id=None, record_id=None):
   
