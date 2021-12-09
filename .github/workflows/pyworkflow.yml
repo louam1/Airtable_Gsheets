@@ -11,7 +11,7 @@ jobs:
         # Version range or exact version of a Python version to use, using SemVer's version range syntax.
           python-version: "3.10" # optional, default is 3.x
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ./requirements.txt
 
       - name: run python script
         run: python3 ./basic.py
