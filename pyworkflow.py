@@ -5,7 +5,7 @@ import pandas as pd
 
 
 table_name= 'Students'
-endpoint1=F'https://api.airtable.com/v0/{base_id}/{table_name}'
+endpoint1=F'https://api.airtable.com/v0/base_id/{table_name}'
 
 
 def airtable_download(table, params_dict={}, api_key=None, base_id=None, record_id=None):
