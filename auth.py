@@ -1,6 +1,7 @@
 from __future__ import print_function
 from googleapiclient.discovery import build 
 from google.oauth2 import service_account
+import dotenv as do
 require('dotenv').config()
 SCOPES = [
 'https://www.googleapis.com/auth/spreadsheets',
