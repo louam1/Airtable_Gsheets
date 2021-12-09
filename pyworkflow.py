@@ -3,10 +3,10 @@ import requests
 import pandas as pd
 
 
-base_id = "DESTINY_BASE_ID"
+
 table_name= 'Students'
 endpoint1=F'https://api.airtable.com/v0/{base_id}/{table_name}'
-api_key = "AIR_API_KEY"
+
 
 def airtable_download(table, params_dict={}, api_key=None, base_id=None, record_id=None):
   
