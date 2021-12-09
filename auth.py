@@ -7,6 +7,6 @@ SCOPES = [
 'https://www.googleapis.com/auth/spreadsheets',
 'https://www.googleapis.com/auth/drive'
 ]
-credentials = service_account.Credentials.from_service_account_file(load_dotenv(credentials.env), scopes=SCOPES)
+credentials = service_account.Credentials.from_service_account_file(load_dotenv('credentials.env'), scopes=SCOPES)
 spreadsheet_service = build('sheets', 'v4', credentials=credentials)
 drive_service = build('drive', 'v3', credentials=credentials)
