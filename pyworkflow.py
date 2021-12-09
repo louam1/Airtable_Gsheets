@@ -1,10 +1,7 @@
 from __future__ import print_function
 from auth import spreadsheet_service
 from auth import drive_service
-
-
 import json
-
 import requests
 import pandas as pd
 import os
