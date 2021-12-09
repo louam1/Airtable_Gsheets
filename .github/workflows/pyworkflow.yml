@@ -21,3 +21,7 @@ jobs:
         env:
           base_id: ${{ secrets.DESTINY_BASE_ID }}
           api_key: ${{ secrets.AIR_API_KEY }}
+          PROJECT_ID: ${{ secrets.PROJECT_ID }}
+          PRIVATE_KEY_ID: ${{ secrets.PRIVATE_KEY_ID }}
+          CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
