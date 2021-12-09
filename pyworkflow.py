@@ -1,3 +1,9 @@
+from __future__ import print_function
+from auth import spreadsheet_service
+from auth import drive_service
+
+
+import json
 
 import requests
 import pandas as pd
@@ -128,4 +134,18 @@ term_meeting_table = pd.melt(frame=initial_df,
                             var_name='meeting'
                            
                             )
+def export_pandas_df_to_sheets():
+    spreadsheet_id = '1hB8iIgJgz7-o_A53r8k13Phn0UBslDzdUlYyZ6FZ62w'
+    
+    df = term_meeting_table
+    body = {
+        'values': term_meeting_table.values.tolist()
+    }
+    
+  
+    result = spreadsheet_service.spreadsheets().values().update(
+        spreadsheetId=spreadsheet_id, body=body, valueInputOption='RAW', range='term_meeting_table!A2:C').execute()
+    print('{0} cells updated.'.format(result.get('updatedCells')))
 
+term_meeting_table['full_name'] = term_meeting_table['full_name'].str.get(0)
+export_pandas_df_to_sheets()
