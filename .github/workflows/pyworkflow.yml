@@ -14,6 +14,8 @@ jobs:
           python-version: "3.10" # optional, default is 3.x
       - name: Install dependencies
         run: pip install -r ./requirements.txt
+      - name: instll dotenv
+        run: npm install dotenv --save
 
 
       - name: run python script
