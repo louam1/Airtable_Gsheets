@@ -18,3 +18,6 @@ jobs:
 
       - name: run python script
         run: python3 ./pyworkflow.py
+        env:
+          base_id: ${{ secrets.DESTINY_BASE_ID }}
+          api_key: ${{ secrets.AIR_API_KEY }}
