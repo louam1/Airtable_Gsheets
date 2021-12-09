@@ -14,8 +14,9 @@ jobs:
           python-version: "3.10" # optional, default is 3.x
       - name: Install dependencies
         run: pip install -r ./requirements.txt
-      - name: instll dotenv
-        run: npm install dotenv --save
+      - name: Dotenv Action
+        uses: falti/dotenv-action@v0.2.7
+
 
 
       - name: run python script
