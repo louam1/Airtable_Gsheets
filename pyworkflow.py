@@ -117,7 +117,7 @@ def identify_errors(airtable_response):
     return
 
 ##Airtable Download
-airtable_records = airtable_download(table_name,params_dict={"view":"meeting_dataframe", "fields" : ["bot_meeting", "eot_meeting", "mot_meeting", "full_name"]},api_key=api_key1,base_id=base_id1)
+airtable_records = airtable_download(table_name,params_dict={"view":"meeting_dataframe", "fields" : ["bot_meeting", "eot_meeting", "mot_meeting", "full_name"]},api_key=api_key,base_id=base_id)
 #print(airtable_records)
 
 initial_df = convert_to_dataframe(airtable_records)
