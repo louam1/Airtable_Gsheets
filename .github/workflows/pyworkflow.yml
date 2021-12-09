@@ -17,4 +17,4 @@ jobs:
 
 
       - name: run python script
-        run: python3 ./basic.py
+        run: python3 ./pyworkflow.py
