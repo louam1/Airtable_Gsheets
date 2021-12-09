@@ -3,10 +3,10 @@ import requests
 import pandas as pd
 
 
-
+api_key1 = api_key
 table_name= 'Students'
 endpoint1=F'https://api.airtable.com/v0/base_id/{table_name}'
-
+base_id1 = base_id
 
 def airtable_download(table, params_dict={}, api_key=None, base_id=None, record_id=None):
   
@@ -116,7 +116,7 @@ def identify_errors(airtable_response):
     return
 
 ##Airtable Download
-airtable_records = airtable_download(table_name,params_dict={"view":"meeting_dataframe", "fields" : ["bot_meeting", "eot_meeting", "mot_meeting", "full_name"]},api_key,base_id)
+airtable_records = airtable_download(table_name,params_dict={"view":"meeting_dataframe", "fields" : ["bot_meeting", "eot_meeting", "mot_meeting", "full_name"]},api_key=api_key1,base_id=base_id1)
 #print(airtable_records)
 
 initial_df = convert_to_dataframe(airtable_records)
